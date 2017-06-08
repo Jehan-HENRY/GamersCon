@@ -1,1 +1,211 @@
-<h1>Hello World</h1>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="logo" href="index.html"><img src="img/logo.svg" alt="Logo"></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#pricing" class="scroll">Pricing</a></li>
+        <li><a href="#">Sign in</a></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <a href="index.html"><img src="img/logo.svg" alt="Logo"></a>
+      </div>
+      <div class="col-xs-6 signin text-right navbar-nav">
+        <a ui-sref="anon.login" class="scroll">Créer mon compte</a>&nbsp; &nbsp;<a ui-sref="anon.register">Me connecter</a>
+      </div>
+    </div>
+
+    <div class="row header-info">
+      <div class="col-sm-10 col-sm-offset-1 text-center">
+        <h1 class="wow fadeIn">Va jouer dehors !</h1>
+        <br />
+        <p class="lead wow fadeIn" data-wow-delay="0.5s">Créez vos parties, <br>
+        Relevez nos défis. Bref, rencontrez d'autres joueurs !</p>
+        <br />
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+            <div class="row">
+              <div class="col-xs-6 text-right wow fadeInUp" data-wow-delay="1s">
+                <a href="#be-the-first" class="btn btn-secondary btn-lg scroll">En savoir plus</a>
+              </div>
+              <div class="col-xs-6 text-left wow fadeInUp" data-wow-delay="1.4s">
+                <a ui-sref="anon.register" class="btn btn-primary btn-lg scroll">Créer mon compte</a>
+              </div>
+            </div><!--End Button Row-->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mouse-icon hidden-xs">
+    <div class="scroll"></div>
+  </div>
+
+<section id="be-the-first" class="pad-xl">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
+        <h2>Déjà dehors ?</h2>
+        <p class="lead">Crée ta partie ou rejoins-en une depuis ton mobile !</p>
+      </div>
+    </div>
+
+    <div class="iphone wow fadeInUp" data-wow-delay="1s">
+      <img src="img/iphone.png">
+    </div>
+  </div>
+</section>
+
+<section id="main-info" class="pad-xl">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 wow fadeIn" data-wow-delay="0.4s">
+        <hr class="line purple">
+        <h3>Crée ta partie</h3>
+        <p>Envie de rencontrer de nouveaux joueurs pour le simple plaisir de partager une partie ? Créer ton événement et éclatez-vous !</p>
+      </div>
+      <div class="col-sm-4 wow fadeIn" data-wow-delay="0.8s">
+        <hr  class="line blue">
+        <h3>Remporte la mise</h3>
+        <p>Pour chaque défi relevé, tu remportes la somme placée par tous les joueurs de la partie. De quoi compléter ta collection de jeux !</p>
+      </div>
+      <div class="col-sm-4 wow fadeIn" data-wow-delay="1.2s">
+        <hr  class="line yellow">
+        <h3>Relève nos défis</h3>
+        <p>Tu penses être le meilleur ? Crée ta partie ou rejoins-en une et prouve à tout le monde que tu es imbattable !</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Pricing-->
+<section id="pricing" class="pad-lg">
+  <div class="container">
+    <div class="row margin-40">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <i class="fa fa-info-circle fa-4x margin-40"></i>
+        <h2 class="white">Comment ça marche ?</h2>
+        <p class="white">Créer/rejoindre une partie libre, participer à un tournois ou relever un défi, on t'explique tout !</p>
+      </div>
+    </div>
+
+    <div class="row margin-50">
+
+      <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1s">
+        <br />
+        <ul class="list-unstyled pricing-table text-center">
+          <li class="headline"><h5 class="white">Pour le fun</h5></li>
+          <li class="price"><div class="amount">Partie libre</div></li>
+          <li class="info">Pas de prise de tête, il s'agit de jouer pour le fun et rencontrer un max de joueurs !</li>
+          <li class="features first">Je choisis un jeu</li>
+          <li class="features">Je définis un lieu de rencontre</li>
+          <li class="features">J'invite des joueurs</li>
+          <li class="features last btn btn-secondary btn-wide"><a ui-sref="anon.register">Je lance les invits' !</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="0.4s">
+        <ul class="list-unstyled pricing-table active text-center">
+          <li class="headline"><h5 class="white">Parce que tu es le meilleur</h5></li>
+          <li class="price"><div class="amount">Contest</div></li>
+          <li class="info">Organise ton contest, gagne-le et remporte la mise ! Seulement pour les PGM !</li>
+          <li class="features first">Je choisis un jeu</li>
+          <li class="features">Je définis un lieu de rencontre</li>
+          <li class="features">Je sélectionne une mise de départ</li>
+          <li class="features">En cas de victoire, je rafle la mise !</li>
+          <li class="features last btn btn-secondary btn-wide"><a ui-sref="anon.register">Je suis le meilleur !</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4 pricing-container wow fadeInUp" data-wow-delay="1.3s">
+        <br />
+        <ul class="list-unstyled pricing-table text-center">
+          <li class="headline"><h5 class="white">Pour la gagne</h5></li>
+          <li class="price"><div class="amount">Défi</div></li>
+          <li class="info">Nous ajoutons de nouveaux défis toutes les semaines. Remporte-les et grimpe dans le classement !</li>
+          <li class="features first">Choisis un défi</li>
+          <li class="features">Remporte-le</li>
+          <li class="features">Gagne des points et level up !</li>
+          <li class="features last btn btn-secondary btn-wide"><a ui-sref="anon.register">Défi accepté !</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- <section id="invite" class="pad-lg light-gray-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <i class="fa fa-envelope-o margin-40"></i>
+        <h2 class="black">Get the invite</h2>
+        <br />
+        <p class="black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.</p>
+        <br />
+
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <form role="form">
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg">Request Invite</button>
+            </form>
+          </div>
+        </div><!-End Form row->
+
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section id="press" class="pad-sm">
+  <div class="container">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      <i class="fa fa-comments-o fa-4x margin-40"></i>
+      <h2 class="black">Ils aiment GamersCon et en parlent</h2><br />
+    </div>
+    <div class="row margin-30 news-container">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="0.8s">
+        <a href="#" target="_blank">
+        <img class="avatar pull-left" src="img/philippe.jpg" alt="Tech Crunch">
+        <br /><p class="black">GamersCon m'a permis de créer des parties et rencontrer des joueurs qui sont devenus des amis !<br />
+        <small><em>Philippe - 15 janvier 2015</em></small></p>
+        </a>
+      </div>
+    </div>
+
+    <div class="row margin-30 news-container">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="1.2s">
+        <a href="#" target="_blank">
+        <img class="avatar pull-left" src="img/jehan.jpg" alt="Forbes">
+        <p class="black">Relever les défis de GamersCon est grisant, d'autant plus qu'ils me permettent de compléter mes revenus !<br />
+        <small><em>Jehan - 25 février 2015</em></small></p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
