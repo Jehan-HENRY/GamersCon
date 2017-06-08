@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
         <form class="form" name="loginForm" novalidate ng-submit="login()">
             <div ng-repeat="error in errors">{{error.error}}</div>
@@ -13,4 +13,34 @@
             <button type="submit" class="btn btn-primary btn-block">Login</button>
         </form>
     </div>
+</div> -->
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form" class="form" name="loginForm" novalidate ng-submit="login()">
+        <h2 class="black text-center">Connecte-toi<br /><small>Et commence à jouer</small></h2>
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="first_name" id="first_name" class="form-control input-lg" ng-model="user.email" required placeholder="Adresse email" tabindex="1">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="last_name" id="last_name" class="form-control input-lg" ng-model="user.password" required placeholder="Mot de passe" tabindex="2">
+            </div>
+          </div>
+        </div>
+
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-12 col-md-6"><input type="submit" value="Me connecter" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+          <div class="col-xs-12 col-md-6"><a ui-sref="anon.register" class="btn btn-success btn-block btn-lg">Créer mon compte</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
