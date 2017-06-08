@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const tournoiSchema = new mongoose.Schema({
   nom: {
     type: String,
-    required: true,
+    required: true
   },
   jeu: {
     type: String,
