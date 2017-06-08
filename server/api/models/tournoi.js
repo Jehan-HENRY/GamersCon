@@ -11,21 +11,21 @@ const tournoiSchema = new mongoose.Schema({
     required: true
   },
   date: {
-    type: Number,
+    type: String,
     required: true
   },
   lieu: {
     type: String
   },
   mise: {
-    type: Number
+    type: String
   },
   image: {
     data: Buffer,
     contentType: String
   },
   nbjrs: {
-    type: Number,
+    type: String,
     required: true
   }
 });
