@@ -1,5 +1,6 @@
 import express from 'express';
 import Tournoi from '../models/tournoi.js';
+import Auth from '../middlewares/authorization.js';
 
 let router = express.Router();
 
