@@ -231,6 +231,9 @@ a:hover, a:focus {
   color: white;
 }
 
+.platform {
+  text-align: center;
+}
 
 
 /* ==========================================================================
@@ -278,7 +281,7 @@ a:hover, a:focus {
 }
 
 .logo img {
-	margin-top: 6px;
+	margin: 20px 0 20px 0;
 }
 
 
@@ -469,6 +472,7 @@ footer small {
 .cover {
   width: 170px;
   height: 212px;
+  margin: 5px 5px 5px 5px
 }
 
 p.games_caption {
