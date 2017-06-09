@@ -16,4 +16,10 @@ angular.module('app')
         $(".cancel3").hide();
       });
     });
+
+    $scope.create = function() {
+      Tournoi.create().then(function(res) {
+        console.log(res.data);
+      });
+    };
   });
