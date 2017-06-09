@@ -53,11 +53,57 @@
             <div class="media">
               <div class="media-body">
                 <ul class="nav nav-pills">
-                  <li class="active"><a data-toggle="tab" href="mygames#prochaines">Prochaines</a></li>
+                  <li class="active"><a data-toggle="tab" href="mygames#create">Créer une partie</a></li>
+                  <li><a data-toggle="tab" href="mygames#prochaines">Prochaines</a></li>
                   <li><a data-toggle="tab" href="mygames#terminees">Terminées</a></li>
                 </ul>
 
                 <div class="tab-content">
+                  <div id="create" class="tab-pane fade in active">
+                    <h4 class="media-heading">
+                    <p>Créez votre propre partie libre en déterminant son nom, le jeu sur lequel elle est basée, ainsi que les date et lieu de rencontre. N'oubliez pas le nombre de joueurs pouvant
+                      participer !</p></h4>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-8 col-md-12">
+                        <form role="form" class="form" name="registerForm" novalidate ng-submit="register()">
+                          <hr class="colorgraph">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" ng-model="contest.nom" required placeholder="Nom de la partie" tabindex="1">
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" ng-model="contest.jeu" required placeholder="Jeu" tabindex="2">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" ng-model="contest.date" required placeholder="JJ/MM/AAAA" tabindex="3">
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" ng-model="contest.lieu" required placeholder="Adresse du lieu de la rencontre" tabindex="4">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="number" name="password_confirmation" id="password_confirmation" class="form-control input-lg" ng-model="contest.nbjrs" required placeholder="Nombre de joueurs" tabindex="7">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 col-md-4"><a ui-sref="anon.login" class="btn btn-success btn-block btn-lg">Créer mon Contest</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   <div id="prochaines" class="tab-pane fade in active">
                     <h4 class="media-heading">
                     <p>Voici toutes les parties libres créées que vous pouvez rejoindre. N'hésitez pas à organiser la vôtre si nécessaire !</p></h4>
