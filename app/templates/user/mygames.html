@@ -8,7 +8,7 @@
 
       <!-- user profile pic -->
       <div class="userprofile text-center">
-        <div class="userpic"> <img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></div>
+        <div class="userpic"><a ui-sref="user.profile"><img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></a></div>
         <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
         <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
       </div>
@@ -16,7 +16,7 @@
       <!-- user profile pic -->
 
       <ul class="nav" id="side-menu">
-        <li> <a href="index.html"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
+        <li> <a ui-sref="user.profile"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
         <li> <a href="tables.html"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>

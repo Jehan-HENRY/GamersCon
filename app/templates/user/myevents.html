@@ -8,7 +8,7 @@
 
       <!-- user profile pic -->
       <div class="userprofile text-center">
-        <div class="userpic"> <img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></div>
+        <div class="userpic"><a ui-sref="user.profile"><img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></a></div>
         <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
         <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
       </div>
@@ -16,7 +16,7 @@
       <!-- user profile pic -->
 
       <ul class="nav" id="side-menu">
-        <li> <a href="index.html"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
+        <li> <a ui-sref="user.profile"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
         <li> <a ui-sref="user.myevents"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
@@ -74,7 +74,7 @@
                       <tbody>
                         <tr>
                           <td>GTA V</td>
-                          <td>PS4</td>
+                          <td><img src="http://icon-icons.com/icons2/844/PNG/512/Playstation_icon-icons.com_67099.png" alt="" class="logo"></td>
                           <td>Le 21/07/17 à 18:00</td>
                           <td>PMU 2 pl. de l'Hôtel de Ville, 28240 La Loupe</td>
                           <td><button type="button" class="btn btn-danger">Annuler</button></td>
