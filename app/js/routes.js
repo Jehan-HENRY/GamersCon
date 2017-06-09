@@ -71,6 +71,33 @@ angular.module('app')
                         controller: 'ProfileController'
                     }
                 }
+            })
+            .state('user.mygames', {
+                url: '/mygames',
+                views: {
+                    'content@': {
+                        templateUrl: 'user/mygames.html',
+                        controller: 'MygamesController'
+                    }
+                }
+            })
+            .state('user.gamepage', {
+                url: '/gamepage',
+                views: {
+                    'content@': {
+                        templateUrl: 'user/gamepage.html',
+                        controller: 'GamepageController'
+                    }
+                }
+            })
+            .state('user.myevents', {
+                url: '/myevents',
+                views: {
+                    'content@': {
+                        templateUrl: 'user/myevents.html',
+                        controller: 'MyeventsController'
+                    }
+                }
             });
         $urlRouterProvider.otherwise('/');
     });

@@ -11,22 +11,12 @@
 
 <body>
 
-  <div ui-view='navbar'></div>
   <div ui-view='content'></div>
 
   <footer>
     <div class="container">
 
       <div class="row">
-        <!-- <div class="col-sm-12 margin-20">
-          <ul class="list-inline social">
-            <li>Connect with us on</li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          </ul>
-        </div> -->
-
         <div class="col-sm-12 text-center">
           <p><small>Copyright &copy; 2017. Tous droits réservés.
               Créé avec <span style="color:red;">♥</span> par <a href="http://github.com/zefifi" target="_blank">Philippe</a> et <a href="http://github.com/jehan-henry" target="_blank">Jehan</a></small></p>
@@ -37,6 +27,13 @@
   </footer>
 
   <script type="text/javascript" src="<%= js %>"></script>
+  <script>
+        $('.grid').masonry({
+          itemSelector: '.grid-item'
+        });
+
+        $('.swipebox').swipebox();
+    </script>
 </body>
 
 </html>

@@ -11,14 +11,13 @@
         <div class="userpic"> <img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></div>
         <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
         <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
-        <p class="logout"><a ui-sref="anon.home">Me déconnecter</a></p>
       </div>
       <div class="clearfix"></div>
       <!-- user profile pic -->
 
       <ul class="nav" id="side-menu">
-        <li> <a ui-sref="user.profile"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
-        <li> <a ui-sref="user.myevents"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
+        <li> <a href="index.html"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
+        <li> <a href="tables.html"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
         <li> <a ui-sref="user.mygames"><i class="fa fa-edit fa-fw"></i>Mes jeux</a> </li>
@@ -34,8 +33,8 @@
 
     <div class="row">
       <div class="col-md-12  header-wrapper">
-        <h1 class="page-header">Mon compte</h1>
-        <p class="page-subtitle">Consultez votre compte et modifiez vos données personnelles ici.</p>
+        <h1 class="page-header">Mes jeux</h1>
+        <p class="page-subtitle">Consultez votre liste de jeux et modifiez-la si nécessaire.</p>
       </div>
       <!-- /.col-lg-12 -->
     </div>
@@ -43,32 +42,49 @@
     <ol class="breadcrumb">
       <li><a href="javascript:void(0)">{{user.pseudo}}</a></li>
       <li>Dashboard</li>
-      <li class="active">Mes données personnelles</li>
+      <li class="active">Mes jeux</li>
     </ol>
     <div class="row">
 
-      <div class="col-lg-8 col-sm-12 pull-left posttimeline">
+      <div class="col-lg-12 col-sm-12 pull-left posttimeline">
 
         <div class="panel panel-default">
           <div class="col-md-12">
             <div class="media">
               <div class="media-body">
-                <h4 class="media-heading">Mes données personnelles<br>
-                <p>Voici vos données personnelles. Pour les éditer, cliquez sur Modifier.</p>
-                <div class="col-md-12">
-                  <dl class="dl-horizontal">
-                    <dt>Nom complet</dt>
-                    <dd>{{user.prenom}} {{user.nom}}</dd>
-                    <dt>Pseudo</dt>
-                    <dd>{{user.pseudo}}</dd>
-                    <dt>Age</dt>
-                    <dd>{{user.age}} ans</dd>
-                    <dt>Email</dt>
-                    <dd>{{user.email}}</dd>
-                    <dt>Mot de passe</dt>
-                    <dd>Modifier</dd>
-                  </dl>
+                <ul class="nav nav-pills">
+                  <li class="active"><a data-toggle="tab" href="mygames#ps4">PS4</a></li>
+                  <li><a data-toggle="tab" href="mygames#xboxone">Xbox One</a></li>
+                  <li><a data-toggle="tab" href="mygames#ajouter">Ajouter un jeu</a></li>
+                </ul>
+
+                <div class="tab-content">
+                  <div id="ps4" class="tab-pane fade in active">
+                    <h4 class="media-heading">
+                    <p>Voici tous les jeux que tu possèdes sur PS4. Organise des parties libres, des tournois et remporte des défis !</p></h4>
+                    <div class="col-md-12">
+                      <div class="games text-center">
+                      <img src="../../img/nier.jpg" class="cover" alt="">
+                      <img src="../../img/sexy-brutal.jpg" class="cover" alt="">
+                      <a ui-sref="user.gamepage"><img src="../../img/gtav.jpg" class="cover" alt=""></a>
+                      <img src="../../img/horizon.jpg" class="cover" alt="">
+                      <img src="../../img/nfs.png" class="cover" alt="">
+                    </div>
+                  </div>
                 </div>
+                  <div id="xboxone" class="tab-pane fade">
+                    <h4 class="media-heading">
+                    <p>Oops ! Vous ne possédez actuellement aucun jeu sur ce support. Cliquez sur <strong>Ajouter un jeu</strong> pour y remédier !</p></h4>
+                  </div>
+                  <div id="ajouter" class="tab-pane fade">
+                    <h4 class="media-heading">
+                    <p>Pour ajouter un jeu à votre collection, tapez son nom dans le champ de recherche ci-dessous :</p></h4>
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                      <div class="form-group">
+                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" ng-model="game.title" required placeholder="Ex : GTA V, Pokémon GO..." tabindex="1">
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
