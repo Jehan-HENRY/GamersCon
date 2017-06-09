@@ -1,0 +1,165 @@
+<div id="wrapper gta">
+  <div class="navbar-default sidebar">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html">{{user.pseudo}}</a> </div>
+    <div class="clearfix"></div>
+    <div class="sidebar-nav navbar-collapse">
+
+      <!-- user profile pic -->
+      <div class="userprofile text-center">
+        <div class="userpic"> <img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></div>
+        <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
+        <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
+      </div>
+      <div class="clearfix"></div>
+      <!-- user profile pic -->
+
+      <ul class="nav" id="side-menu">
+        <li> <a href="index.html"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
+        <li> <a href="tables.html"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
+        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
+        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
+        <li> <a ui-sref="user.mygames"><i class="fa fa-edit fa-fw"></i>Mes jeux</a> </li>
+        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Boutique</a> </li>
+      </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+  </div>
+  <!-- /.navbar-static-side -->
+
+  <!-- Page Content -->
+  <div id="page-wrapper">
+
+    <div class="row">
+      <div class="col-md-12  header-wrapper">
+        <h1 class="page-header">GTA V</h1>
+        <p class="page-subtitle">Tu consultes actuellement la fiche de GTA V. Organise des parties libres, des tournois et remporte des défis !</p>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <ol class="breadcrumb">
+      <li><a href="javascript:void(0)">{{user.pseudo}}</a></li>
+      <li>Dashboard</li>
+      <li>Mes jeux</li>
+      <li class="active">GTA V</li>
+    </ol>
+    <div class="row">
+
+      <div class="col-lg-12 col-sm-12 pull-left posttimeline">
+
+        <div class="panel panel-default">
+          <div class="col-md-12">
+            <div class="media">
+              <div class="media-body">
+                <ul class="nav nav-pills">
+                  <li class="active"><a data-toggle="tab" href="mygames#partielibre">Parties libres</a></li>
+                  <li><a data-toggle="tab" href="mygames#contests">Contests</a></li>
+                  <li><a data-toggle="tab" href="mygames#defis">Défis</a></li>
+                </ul>
+
+                <div class="tab-content">
+                  <div id="partielibre" class="tab-pane fade in active">
+                    <h4 class="media-heading">
+                    <p>Voici toutes les parties libres créées que vous pouvez rejoindre. N'hésitez pas à organiser la vôtre si nécessaire !</p></h4>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Qui organise ?</th>
+                          <th>Quand ?</th>
+                          <th>Où ?</th>
+                          <th>Rejoindre ?</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Bramar</td>
+                          <td>Le 21/07/17 à 18:00</td>
+                          <td>PMU 2 pl. de l'Hôtel de Ville, 28240 La Loupe</td>
+                          <td><button type="button" class="btn btn-success">Go !</button></td>
+                        </tr>
+                        <tr>
+                          <td>Bonisseur De La Bath</td>
+                          <td>Le 25/07/17 à 18:30</td>
+                          <td>Place du Musée du Louvre, Paris Ier</td>
+                          <td><button type="button" class="btn btn-success">Go !</button></td>
+                        </tr>
+                        <tr>
+                          <td>OSS117</td>
+                          <td>Le 26/07/17 à 18:30</td>
+                          <td>Jardins du Trocadéro, Paris XVI</td>
+                          <td><button type="button" class="btn btn-success">Go !</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="contests" class="tab-pane fade">
+                    <h4 class="media-heading">
+                    <p>Voici tous les contests créés que vous pouvez rejoindre. N'hésitez pas à organiser le vôtre si nécessaire !</p></h4>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Qui organise ?</th>
+                          <th>Mise de départ</th>
+                          <th>Quand ?</th>
+                          <th>Où ?</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>JonSnow</td>
+                          <td>5€</td>
+                          <td>Le 21/07/17 à 18:00</td>
+                          <td>PMU 2 pl. de l'Hôtel de Ville, 28240 La Loupe</td>
+                        </tr>
+                        <tr>
+                          <td>Arya</td>
+                          <td>10€</td>
+                          <td>Le 25/07/17 à 18:30</td>
+                          <td>Place du Musée du Louvre, Paris Ier</td>
+                        </tr>
+                        <tr>
+                          <td>Tyrion</td>
+                          <td>15€</td>
+                          <td>Le 26/07/17 à 18:30</td>
+                          <td>Jardins du Trocadéro, Paris XVI</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id="ajouter" class="tab-pane fade">
+                    <h4 class="media-heading">
+                    <p>Pour ajouter un jeu à votre collection, tapez son nom dans le champ de recherche ci-dessous :</p></h4>
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                      <div class="form-group">
+                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" ng-model="game.title" required placeholder="Ex : GTA V, Pokémon GO..." tabindex="1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <!-- /#wrapper -->
+  <div class="feedback">
+    <button class="btn btn-primary feedbackbtn"><i class="fa  fa-comment-o"></i></button>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="page-header small">Hello {{user.pseudo}},</div>
+        <div class="page-subtitle small">T'as une question ? Contacte-nous, on te répondra sous 24h !</div>
+      </div>
+      <div class="panel-body">
+        <textarea class="form-control" placeholder="Tape ta question ici"></textarea>
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-primary">Envoyer</button>
+      </div>
+    </div>
+  </div>

@@ -226,6 +226,11 @@ a:hover, a:focus {
 	background: #6d3f96;
 }
 
+.logout {
+  font-size: 13px;
+  color: white;
+}
+
 
 
 /* ==========================================================================
@@ -307,6 +312,9 @@ header {
   padding-top: 9px;
 }
 
+#steps, #testimonials {
+  background-color: white;
+}
 
 .mouse-icon {
     border: 2px solid #fff;
@@ -444,21 +452,34 @@ hr.line {
 }
 
 footer {
-  background: #ffffff;
-  padding: 100px 0 0 0;
+  background: #393E70;
+  padding: 40px 0px;
+}
+
+footer small {
+  color: white;
 }
 
 .social li a:hover {
   opacity: 0.5;
 }
 
+/*---------------Covers-------------------*/
 
+.cover {
+  width: 170px;
+  height: 212px;
+}
+
+p.games_caption {
+  margin: 0 0 0 5px;
+}
 
 /*---------------Pricing Tables-------------------*/
 
 
 #pricing {
-  background: #70cbce;
+  background: #393E70;
 }
 
 .pricing-container {
