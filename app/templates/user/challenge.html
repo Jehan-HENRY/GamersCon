@@ -1,0 +1,119 @@
+<div id="wrapper gta">
+  <div class="navbar-default sidebar">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" ui-sref="user.profile">{{user.pseudo}}</a> </div>
+    <div class="clearfix"></div>
+    <div class="sidebar-nav navbar-collapse">
+
+      <!-- user profile pic -->
+      <div class="userprofile text-center">
+        <div class="userpic"><a ui-sref="user.profile"><img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></a></div>
+        <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
+        <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
+      </div>
+      <div class="clearfix"></div>
+      <!-- user profile pic -->
+
+      <ul class="nav" id="side-menu">
+        <li> <a ui-sref="user.profile"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
+        <li> <a ui-sref="user.myevents"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
+        <li> <a ui-sref="user.contests"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
+        <li> <a ui-sref="user.challenge"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
+        <li> <a ui-sref="user.mygames"><i class="fa fa-edit fa-fw"></i>Mes jeux</a> </li>
+        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Boutique</a> </li>
+      </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+  </div>
+  <!-- /.navbar-static-side -->
+
+  <!-- Page Content -->
+  <div id="page-wrapper">
+
+    <div class="row">
+      <div class="col-md-12  header-wrapper">
+        <h1 class="page-header">Défis</h1>
+        <p class="page-subtitle">Tu t'ennuies ? Alors essaie nos défis et remporte un maximum de points et de récompenses !</p>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <ol class="breadcrumb">
+      <li><a href="javascript:void(0)">{{user.pseudo}}</a></li>
+      <li>Dashboard</li>
+      <li class="active">Défis</li>
+    </ol>
+    <div class="row">
+
+      <div class="col-lg-12 col-sm-12 pull-left posttimeline">
+
+        <div class="panel panel-default">
+          <div class="col-md-12">
+            <div class="media">
+              <div class="media-body">
+                <ul class="nav nav-pills">
+                  <li class="active"><a data-toggle="tab" href="challenge#current">Défis en cours</a></li>
+                  <li><a data-toggle="tab" href="challenge#defistermines">Terminés</a></li>
+                </ul>
+
+                <div class="tab-content">
+                  <div id="current" class="tab-pane fade in active">
+                    <h4 class="media-heading">
+                    <p>Les défis proposés par GamersCon exigent du savoir faire et de la patience ! Remplissez les objectifs qui vous sont imposés avant la date limite et soyez récompensés
+                      grâce à vos talents !</p></h4>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="games text-center">
+                        <img src="../../img/nier.jpg" class="cover" alt="">
+                        <img src="../../img/sexy-brutal.jpg" class="cover" alt="">
+                        <a ui-sref="user.gamepage"><img src="../../img/gtav.jpg" class="cover" alt=""></a>
+                        <img src="../../img/horizon.jpg" class="cover" alt="">
+                        <img src="../../img/nfs.png" class="cover" alt="">
+                      </div>
+                    </div>
+                      </div>
+                    </div>
+                      <div id="defistermines" class="tab-pane fade">
+                        <h4 class="media-heading">
+                    <p>Voici les Contests récemment terminés qui ont été organisés par la communauté.</p></h4>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th><strong>Jeu</strong></th>
+                          <th class="platform"><strong>Plateforme</strong></th>
+                          <th><strong>Objectif</strong></th>
+                          <th><strong>Date limite</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="cancel">
+                          <td>Fifa 17</td>
+                          <td class="platform"><img src="../../img/ps.png" alt="" class="logo"></td>
+                          <td>Gagner avec une différence de 5 buts en prenant l'équipe du Barça face au Real Madrid</td>
+                          <td>Le 21/05/17</td>
+                        </tr>
+                        <tr class="cancel2">
+                          <td>Colin McRae Rally 2.0</td>
+                          <td class="platform"><img src="../../img/apple-android-logos.png" alt=""></td>
+                          <td>Terminer la Spéciale de Grèce en moins d'1"00.</td>
+                          <td>Le 15/05/17</td>
+                        </tr>
+                        <tr class="cancel3">
+                          <td>Call of Duty: Modern Warfare</td>
+                          <td class="platform"><img src="../../img/xbox.png" alt="" class="logo"></td>
+                          <td>Effectuez un minimum de 40 frags dans une partie de 10 minutes</td>
+                          <td>Le 10/05/17</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->

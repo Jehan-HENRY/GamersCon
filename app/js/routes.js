@@ -101,6 +101,15 @@ angular.module('app')
                         controller: 'ContestsController'
                     }
                 }
+            })
+            .state('user.challenge', {
+                url: '/challenge',
+                views: {
+                    'content@': {
+                        templateUrl: 'user/challenge.html',
+                        controller: 'ChallengeController'
+                    }
+                }
             });
         $urlRouterProvider.otherwise('/');
     });

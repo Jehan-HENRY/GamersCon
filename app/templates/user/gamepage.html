@@ -19,7 +19,7 @@
         <li> <a ui-sref="user.profile"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
         <li> <a ui-sref="user.myevents"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
         <li> <a ui-sref="user.contests"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
-        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
+        <li> <a ui-sref="user.challenge"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
         <li> <a ui-sref="user.mygames"><i class="fa fa-edit fa-fw"></i>Mes jeux</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Boutique</a> </li>
       </ul>
@@ -66,10 +66,10 @@
                     <table class="table table-hover">
                       <thead>
                         <tr>
-                          <th>Qui organise ?</th>
-                          <th>Quand ?</th>
-                          <th>Où ?</th>
-                          <th>Rejoindre ?</th>
+                          <th><strong>Qui organise ?</strong></th>
+                          <th><strong>Quand ?</strong></th>
+                          <th><strong>Où ?</strong></th>
+                          <th><strong>Rejoindre ?</strong></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -100,10 +100,10 @@
                     <table class="table table-hover">
                       <thead>
                         <tr>
-                          <th>Qui organise ?</th>
-                          <th>Mise de départ</th>
-                          <th>Quand ?</th>
-                          <th>Où ?</th>
+                          <th><strong>Qui organise ?</strong></th>
+                          <th><strong>Mise de départ</strong></th>
+                          <th><strong>Quand ?</strong></th>
+                          <th><strong>Où ?</strong></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -128,14 +128,39 @@
                       </tbody>
                     </table>
                   </div>
-                  <div id="ajouter" class="tab-pane fade">
+                  <div id="defis" class="tab-pane fade">
                     <h4 class="media-heading">
                     <p>Pour ajouter un jeu à votre collection, tapez son nom dans le champ de recherche ci-dessous :</p></h4>
-                    <div class="col-xs-12 col-sm-6 col-md-12">
-                      <div class="form-group">
-                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" ng-model="game.title" required placeholder="Ex : GTA V, Pokémon GO..." tabindex="1">
-                      </div>
-                    </div>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th><strong>Jeu</strong></th>
+                          <th class="platform"><strong>Plateforme</strong></th>
+                          <th><strong>Objectif</strong></th>
+                          <th><strong>Date limite</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>GTA V</td>
+                          <td class="platform"><img src="../../img/ps.png" alt="" class="logo"><img src="../../img/xbox.png" alt="" class="logo"></td>
+                          <td>Faire 10 braquages de banque avec 2 amis minimum</td>
+                          <td>Le 21/07/17</td>
+                        </tr>
+                        <tr>
+                          <td>GTA V</td>
+                          <td class="platform"><img src="../../img/ps.png" alt="" class="logo"><img src="../../img/xbox.png" alt="" class="logo"></td>
+                          <td>Posséder toutes les maisons de Los Santos</td>
+                          <td>Le 21/07/17</td>
+                        </tr>
+                        <tr>
+                          <td>GTA V</td>
+                          <td class="platform"><img src="../../img/ps.png" alt="" class="logo"><img src="../../img/xbox.png" alt="" class="logo"></td>
+                          <td>Faire un saut de plus de 500m en voiture</td>
+                          <td>Le 21/07/17</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
