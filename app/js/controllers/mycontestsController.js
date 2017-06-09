@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('MyeventsController', function($scope, CurrentUser) {
+  .controller('ContestsController', function($scope, CurrentUser) {
     $scope.user = CurrentUser.user();
     $(document).ready(function() {
       $(".cancelbtn").click(function() {

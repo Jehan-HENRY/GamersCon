@@ -1,0 +1,196 @@
+<div id="wrapper gta">
+  <div class="navbar-default sidebar">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" ui-sref="user.profile">{{user.pseudo}}</a> </div>
+    <div class="clearfix"></div>
+    <div class="sidebar-nav navbar-collapse">
+
+      <!-- user profile pic -->
+      <div class="userprofile text-center">
+        <div class="userpic"><a ui-sref="user.profile"><img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></a></div>
+        <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
+        <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
+      </div>
+      <div class="clearfix"></div>
+      <!-- user profile pic -->
+
+      <ul class="nav" id="side-menu">
+        <li> <a ui-sref="user.profile"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
+        <li> <a ui-sref="user.myevents"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
+        <li> <a ui-sref="user.contests"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
+        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
+        <li> <a ui-sref="user.mygames"><i class="fa fa-edit fa-fw"></i>Mes jeux</a> </li>
+        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Boutique</a> </li>
+      </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+  </div>
+  <!-- /.navbar-static-side -->
+
+  <!-- Page Content -->
+  <div id="page-wrapper">
+
+    <div class="row">
+      <div class="col-md-12  header-wrapper">
+        <h1 class="page-header">Contests</h1>
+        <p class="page-subtitle">Envie de jouer dans la cour des grands ? Mise de l'argent et décroche le gros lot ! Si tu as assez de talent, évidemment...</p>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <ol class="breadcrumb">
+      <li><a href="javascript:void(0)">{{user.pseudo}}</a></li>
+      <li>Dashboard</li>
+      <li class="active">Contests</li>
+    </ol>
+    <div class="row">
+
+      <div class="col-lg-12 col-sm-12 pull-left posttimeline">
+
+        <div class="panel panel-default">
+          <div class="col-md-12">
+            <div class="media">
+              <div class="media-body">
+                <ul class="nav nav-pills">
+                  <li class="active"><a data-toggle="tab" href="contests#create">Créer mon contest</a></li>
+                  <li><a data-toggle="tab" href="contests#prochains">Prochains</a></li>
+                  <li><a data-toggle="tab" href="contests#termines">Terminés</a></li>
+                </ul>
+
+                <div class="tab-content">
+                  <div id="create" class="tab-pane fade in active">
+                    <h4 class="media-heading">
+                    <p>Créez votre propre Contest en déterminant son nom, le jeu sur lequel il est basé, ainsi que les date et lieu de rencontre. N'oubliez pas le nombre de joueurs pouvant vous rejoindre et
+                      la mise minimum pour pouvoir participer.</p></h4>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-8 col-md-12">
+                        <form role="form" class="form" name="registerForm" novalidate ng-submit="register()">
+                          <hr class="colorgraph">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" ng-model="contest.nom" required placeholder="Nom du Contest" tabindex="1">
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" ng-model="contest.jeu" required placeholder="Jeu" tabindex="2">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" ng-model="contest.date" required placeholder="JJ/MM/AAAA" tabindex="3">
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="text" name="last_name" id="last_name" class="form-control input-lg" ng-model="contest.lieu" required placeholder="Adresse du lieu de la rencontre" tabindex="4">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="number" name="password" id="password" class="form-control input-lg" ng-model="contest.mise" required placeholder="Mise minimum" tabindex="6">
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                              <div class="form-group">
+                                <input type="number" name="password_confirmation" id="password_confirmation" class="form-control input-lg" ng-model="contest.nbjrs" required placeholder="Nombre de joueurs" tabindex="7">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12 col-md-4"><a ui-sref="anon.login" class="btn btn-success btn-block btn-lg">Créer mon Contest</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      <div id="prochains" class="tab-pane fade in active">
+                        <h4 class="media-heading">
+                        <p>Voici les prochains Contests créés par la communauté. Choisissez votre jeu de prédilection, misez puis participez !</p></h4>
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th><strong>Jeu</strong></th>
+                              <th class="platform"><strong>Plateforme</strong></th>
+                              <th><strong>Quand ?</strong></th>
+                              <th><strong>Où ?</strong></th>
+                              <th class="platform"><strong>Mise minimum</strong></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="cancel">
+                              <td>Overwatch</td>
+                              <td class="platform"><img src="../../img/ps.png" alt="" class="logo"></td>
+                              <td>Le 21/07/17 à 18:00</td>
+                              <td>PMU 2 pl. de l'Hôtel de Ville, 28240 La Loupe</td>
+                              <td class="platform">5€</td>
+                            </tr>
+                            <tr class="cancel2">
+                              <td>HearthStone</td>
+                              <td class="platform"><img src="../../img/apple-android-logos.png" alt=""></td>
+                              <td>Le 25/07/17 à 18:30</td>
+                              <td>Place du Musée du Louvre, Paris Ier</td>
+                              <td class="platform">10€</td>
+                            </tr>
+                            <tr class="cancel3">
+                              <td>Diablo III</td>
+                              <td class="platform"><img src="../../img/xbox.png" alt="" class="logo"></td>
+                              <td>Le 26/07/17 à 18:30</td>
+                              <td>Jardins du Trocadéro, Paris XVI</td>
+                              <td class="platform">15€</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div id="termines" class="tab-pane fade">
+                        <h4 class="media-heading">
+                    <p>Voici les Contests récemment terminés qui ont été organisés par la communauté.</p></h4>
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th><strong>Jeu</strong></th>
+                          <th class="platform"><strong>Plateforme</strong></th>
+                          <th><strong>Quand ?</strong></th>
+                          <th><strong>Où ?</strong></th>
+                          <th class="platform"><strong>Mise minimum</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="cancel">
+                          <td>Fifa 17</td>
+                          <td class="platform"><img src="../../img/ps.png" alt="" class="logo"></td>
+                          <td>Le 21/05/17 à 18:00</td>
+                          <td>PMU 2 pl. de l'Hôtel de Ville, 28240 La Loupe</td>
+                          <td class="platform">5€</td>
+                        </tr>
+                        <tr class="cancel2">
+                          <td>Mobile Legends</td>
+                          <td class="platform"><img src="../../img/apple-android-logos.png" alt=""></td>
+                          <td>Le 25/05/17 à 18:30</td>
+                          <td>Place du Musée du Louvre, Paris Ier</td>
+                          <td class="platform">10€</td>
+                        </tr>
+                        <tr class="cancel3">
+                          <td>Call of Duty: Modern Warfare</td>
+                          <td class="platform"><img src="../../img/xbox.png" alt="" class="logo"></td>
+                          <td>Le 26/05/17 à 18:30</td>
+                          <td>Jardins du Trocadéro, Paris XVI</td>
+                          <td class="platform">15€</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->

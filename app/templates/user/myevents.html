@@ -2,13 +2,13 @@
   <div class="navbar-default sidebar">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html">{{user.pseudo}}</a> </div>
+      <a class="navbar-brand" ui-sref="user.profile">{{user.pseudo}}</a> </div>
     <div class="clearfix"></div>
     <div class="sidebar-nav navbar-collapse">
 
       <!-- user profile pic -->
       <div class="userprofile text-center">
-        <div class="userpic"> <img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></div>
+        <div class="userpic"><a ui-sref="user.profile"><img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></a></div>
         <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
         <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
       </div>
@@ -16,9 +16,9 @@
       <!-- user profile pic -->
 
       <ul class="nav" id="side-menu">
-        <li> <a href="index.html"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
+        <li> <a ui-sref="user.profile"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
         <li> <a ui-sref="user.myevents"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
-        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
+        <li> <a ui-sref="user.contests"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
         <li> <a ui-sref="user.mygames"><i class="fa fa-edit fa-fw"></i>Mes jeux</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Boutique</a> </li>
@@ -34,7 +34,7 @@
     <div class="row">
       <div class="col-md-12  header-wrapper">
         <h1 class="page-header">Mes parties</h1>
-        <p class="page-subtitle">Tu consultes actuellement la fiche de GTA V. Organise des parties libres, des tournois et remporte des défis !</p>
+        <p class="page-subtitle">Consulte tes prochaines parties et celles qui sont terminées. De nouvelles victoires en approche ?</p>
       </div>
       <!-- /.col-lg-12 -->
     </div>
@@ -65,45 +65,45 @@
                       <thead>
                         <tr>
                           <th><strong>Jeu</strong></th>
-                          <th><strong>Plateforme</strong></th>
+                          <th class="platform"><strong>Plateforme</strong></th>
                           <th><strong>Quand ?</strong></th>
                           <th><strong>Où ?</strong></th>
                           <th><strong>Annuler ?</strong></th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="cancel">
                           <td>GTA V</td>
-                          <td>PS4</td>
+                          <td class="platform"><img src="../../img/ps.png" alt="" class="logo"></td>
                           <td>Le 21/07/17 à 18:00</td>
                           <td>PMU 2 pl. de l'Hôtel de Ville, 28240 La Loupe</td>
-                          <td><button type="button" class="btn btn-danger">Annuler</button></td>
+                          <td><button type="button" class="btn btn-danger cancelbtn">Annuler</button></td>
                         </tr>
-                        <tr>
+                        <tr class="cancel2">
                           <td>Pokémon GO!</td>
-                          <td>iOS/Android</td>
+                          <td class="platform"><img src="../../img/apple-android-logos.png" alt=""></td>
                           <td>Le 25/07/17 à 18:30</td>
                           <td>Place du Musée du Louvre, Paris Ier</td>
-                          <td><button type="button" class="btn btn-danger">Annuler</button></td>
+                          <td><button type="button" class="btn btn-danger cancelbtn2">Annuler</button></td>
                         </tr>
-                        <tr>
+                        <tr class="cancel3">
                           <td>Trackmania</td>
-                          <td>Xbox One</td>
+                          <td class="platform"><img src="../../img/xbox.png" alt="" class="logo"></td>
                           <td>Le 26/07/17 à 18:30</td>
                           <td>Jardins du Trocadéro, Paris XVI</td>
-                          <td><button type="button" class="btn btn-danger">Annuler</button></td>
+                          <td><button type="button" class="btn btn-danger cancelbtn3">Annuler</button></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                   <div id="terminees" class="tab-pane fade">
                     <h4 class="media-heading">
-                    <p>Voici les parties récemment terminées que vous avez organisées</p></h4>
+                    <p>Voici les parties récemment terminées que tu as organisées.</p></h4>
                     <table class="table table-hover">
                       <thead>
                         <tr>
                           <th><strong>Jeu</strong></th>
-                          <th><strong>Plateforme</strong></th>
+                          <th class="platform"><strong>Plateforme</strong></th>
                           <th><strong>Quand ?</strong></th>
                           <th><strong>Où ?</strong></th>
                         </tr>
@@ -111,19 +111,19 @@
                       <tbody>
                         <tr>
                           <td>GTA V</td>
-                          <td>PS4</td>
+                          <td class="platform"><img src="../../img/ps.png" alt="" class="logo"></td>
                           <td>Le 21/05/17 à 18:00</td>
                           <td>PMU 2 pl. de l'Hôtel de Ville, 28240 La Loupe</td>
                         </tr>
                         <tr>
                           <td>Pokémon GO!</td>
-                          <td>iOS/Android</td>
+                          <td class="platform"><img src="../../img/apple-android-logos.png" alt=""></td>
                           <td>Le 25/05/17 à 18:30</td>
                           <td>Place du Musée du Louvre, Paris Ier</td>
                         </tr>
                         <tr>
                           <td>Trackmania</td>
-                          <td>Xbox One</td>
+                          <td class="platform"><img src="../../img/xbox.png" alt="" class="logo"></td>
                           <td>Le 26/05/17 à 18:30</td>
                           <td>Jardins du Trocadéro, Paris XVI</td>
                         </tr>
@@ -148,20 +148,3 @@
     </div>
   </div>
   <!-- /.row -->
-
-  <!-- /#wrapper -->
-  <div class="feedback">
-    <button class="btn btn-primary feedbackbtn"><i class="fa  fa-comment-o"></i></button>
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <div class="page-header small">Hello {{user.pseudo}},</div>
-        <div class="page-subtitle small">T'as une question ? Contacte-nous, on te répondra sous 24h !</div>
-      </div>
-      <div class="panel-body">
-        <textarea class="form-control" placeholder="Tape ta question ici"></textarea>
-      </div>
-      <div class="panel-footer">
-        <button class="btn btn-primary">Envoyer</button>
-      </div>
-    </div>
-  </div>

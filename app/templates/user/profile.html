@@ -2,15 +2,16 @@
   <div class="navbar-default sidebar">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html">{{user.pseudo}}</a> </div>
+      <a class="navbar-brand" ui-sref="user.profile">{{user.pseudo}}</a> </div>
     <div class="clearfix"></div>
     <div class="sidebar-nav navbar-collapse">
 
       <!-- user profile pic -->
       <div class="userprofile text-center">
-        <div class="userpic"> <img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></div>
+        <div class="userpic"><a ui-sref="user.profile"><img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></a></div>
         <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
         <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
+
         <p><img src="../img/badge.png" height="25" width="15" alt="">&nbsp;&nbsp;<b>Level 12</b></p>
         <p class="logout"><a ui-sref="anon.home">Me déconnecter</a></p>
       </div>
@@ -20,7 +21,7 @@
       <ul class="nav" id="side-menu">
         <li> <a ui-sref="user.profile"><i class="fa fa-window-restore"></i>Données personnelles</a> </li>
         <li> <a ui-sref="user.myevents"><i class="fa fa-table fa-fw"></i>Mes parties</a> </li>
-        <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
+        <li> <a ui-sref="user.contests"><i class="fa fa-edit fa-fw"></i>Contests</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Défis</a> </li>
         <li> <a ui-sref="user.mygames"><i class="fa fa-edit fa-fw"></i>Mes jeux</a> </li>
         <li> <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Boutique</a> </li>
@@ -140,20 +141,3 @@
   </div>
 </div>
     <!-- /.row -->
-
-<!-- /#wrapper -->
-<div class="feedback">
-  <button class="btn btn-primary feedbackbtn"><i class="fa  fa-comment-o"></i></button>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <div class="page-header small">Hello {{user.pseudo}},</div>
-      <div class="page-subtitle small">T'as une question ? Contacte-nous, on te répondra sous 24h !</div>
-    </div>
-    <div class="panel-body">
-      <textarea class="form-control" placeholder="Tape ta question ici"></textarea>
-    </div>
-    <div class="panel-footer">
-      <button class="btn btn-primary">Envoyer</button>
-    </div>
-  </div>
-</div>
