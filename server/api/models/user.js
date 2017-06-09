@@ -148,9 +148,11 @@ export default class User {
   }
 
   update(req, res) {
-    model.update({
+    model.findOneAndUpdate({
       _id: req.params.id
-    }, req.body, (err, user) => {
+    }, req.body, {
+      new: true
+    }, (err, user) => {
       if (err || !user) {
         res.status(500).send(err.message);
       } else {
