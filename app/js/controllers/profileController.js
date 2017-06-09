@@ -2,7 +2,6 @@ angular.module('app')
   .controller('ProfileController', function($scope, CurrentUser, UserService, LocalService) {
     $scope.user = CurrentUser.user();
     delete $scope.user.password;
-    console.log($scope.user);
 
     $scope.originfos = false;
     $scope.newinfos = false;
