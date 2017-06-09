@@ -27,13 +27,7 @@
   </footer>
 
   <script type="text/javascript" src="<%= js %>"></script>
-  <script>
-        $('.grid').masonry({
-          itemSelector: '.grid-item'
-        });
 
-        $('.swipebox').swipebox();
-    </script>
 </body>
 
 </html>

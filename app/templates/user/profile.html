@@ -8,10 +8,9 @@
 
       <!-- user profile pic -->
       <div class="userprofile text-center">
-        <div class="userpic"> <img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></div>
+        <div class="userpic"><a ui-sref="user.profile"><img src="http://github.com/{{user.pseudo}}.png" alt="" class="userpicimg"></a></div>
         <h3 class="username">{{user.prenom}} {{user.nom}}</h3>
         <p>Alias {{user.pseudo}}, {{user.age}} ans</p>
-        <p class="logout"><a ui-sref="anon.home">Me déconnecter</a></p>
       </div>
       <div class="clearfix"></div>
       <!-- user profile pic -->
