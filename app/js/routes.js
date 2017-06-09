@@ -5,12 +5,6 @@ angular.module('app')
                 abstract: true,
                 data: {
                     access: AccessLevels.anon
-                },
-                views: {
-                    'navbar@': {
-                        templateUrl: 'anon/navbar.html',
-                        controller: 'NavbarController'
-                    }
                 }
             })
             .state('anon.home', {
@@ -96,6 +90,15 @@ angular.module('app')
                     'content@': {
                         templateUrl: 'user/myevents.html',
                         controller: 'MyeventsController'
+                    }
+                }
+            })
+            .state('user.contests', {
+                url: '/contests',
+                views: {
+                    'content@': {
+                        templateUrl: 'user/contests.html',
+                        controller: 'ContestsController'
                     }
                 }
             });
